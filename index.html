@@ -252,6 +252,30 @@ a{color:inherit}
 .guarantee .t small{font-size:13px;font-weight:600;color:var(--tip)}
 .guarantee h3{font-size:clamp(24px,5vw,34px);font-weight:800;letter-spacing:-0.04em;line-height:1.05}
 .guarantee p{font-size:16.5px;line-height:1.55;color:rgba(255,255,255,.8);max-width:640px}
+/* Plano casal */
+.couple{margin-top:16px;border-radius:24px;background:var(--card);color:var(--ink);padding:clamp(22px,4vw,40px);display:grid;gap:28px;scroll-margin-top:80px}
+@media (min-width:900px){.couple{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}}
+.couple-intro{display:flex;flex-direction:column;gap:16px;min-width:0}
+.couple-top{display:flex;align-items:center;gap:12px}
+.couple h3{font-size:clamp(28px,6.4vw,44px);line-height:1.02;font-weight:800;letter-spacing:-0.045em}
+.couple-intro > p{font-size:16px;line-height:1.6;color:var(--ink-2);max-width:520px}
+.couple-perks{display:flex;flex-direction:column;gap:10px}
+.couple-perks li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.45;font-weight:500}
+.couple-options{display:flex;flex-direction:column;gap:10px;min-width:0}
+.copt{border:1px solid var(--rule);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:var(--paper)}
+.copt-best{background:var(--card);border-color:transparent;box-shadow:0 0 0 2px var(--accent)}
+.copt-head{display:flex;justify-content:space-between;align-items:center;gap:8px 10px;flex-wrap:wrap}
+.copt-head b{font-size:17px;letter-spacing:-0.02em}
+.copt-head .tag{font-size:12px;padding:5px 10px}
+.copt-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.copt-price b{font-size:clamp(38px,9vw,46px);font-weight:800;letter-spacing:-0.05em;line-height:1}
+.copt-price s{font-size:16px;color:var(--ink-2)}
+.copt small{font-size:14px;color:var(--ink-2);line-height:1.45}
+.copt small strong{color:var(--ink)}
+.couple-options .btn{width:100%;margin-top:6px}
+.couple-options .micro{text-align:center}
+.lead a{color:#fff;font-weight:700}
+
 .perks{display:grid;gap:10px;margin-top:16px}
 @media (min-width:760px){.perks{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .perk{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,.14);font-size:14.5px;line-height:1.4}
@@ -607,7 +631,7 @@ footer span{font-size:13px;color:var(--ink-2)}
         <span class="eyebrow">Investimento</span>
         <h2 class="h2">Menos de R$2,50 por dia para ter treino, dieta e um treinador ao seu lado.</h2>
       </div>
-      <p class="lead">Os dois planos incluem os 4 pilares completos. A diferença é o tempo que você terá comigo.</p>
+      <p class="lead">Os dois planos incluem os 4 pilares completos. A diferença é o tempo que você terá comigo. Vai treinar a dois? Veja a <a href="#casal">promoção casal</a>.</p>
     </div>
 
     <div class="plans">
@@ -642,6 +666,39 @@ footer span{font-size:13px;color:var(--ink-2)}
         </ul>
         <a class="btn btn-primary" href="https://mgcoach.github.io/anamnese/" target="_blank" rel="noopener">Quero o plano de 4 meses
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="couple" id="casal">
+      <div class="couple-intro">
+        <div class="couple-top">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.2c3 .2 5.5 2.7 5.5 5.8"/></svg></span>
+          <span class="tag">Promoção casal</span>
+        </div>
+        <h3>Casal que treina junto, evolui junto.</h3>
+        <p>Fechem a consultoria a dois e paguem menos do que pagariam separados. Cada um recebe o próprio protocolo, calculado para o seu corpo e o seu objetivo. Um motiva o outro, e os dois têm o mesmo acompanhamento comigo.</p>
+        <ul class="couple-perks">
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c24400" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Dieta e treino individuais para cada um</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c24400" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Acompanhamento diário no WhatsApp para os dois</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c24400" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Feedbacks semanais e ajustes para cada pessoa</li>
+        </ul>
+      </div>
+      <div class="couple-options">
+        <div class="copt">
+          <div class="copt-head"><b>2 meses · casal</b></div>
+          <div class="copt-price"><b>R$250</b><s>R$300</s></div>
+          <small>R$125 por pessoa · <strong>R$2,08 por dia cada</strong></small>
+          <span class="save">Vocês economizam R$50</span>
+        </div>
+        <div class="copt copt-best">
+          <div class="copt-head"><b>4 meses · casal</b><span class="tag">Maior economia</span></div>
+          <div class="copt-price"><b>R$425</b><s>R$500</s></div>
+          <small>R$212,50 por pessoa · <strong>R$1,77 por dia cada</strong></small>
+          <span class="save">Vocês economizam R$75</span>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/5571992241609?text=Ol%C3%A1%2C%20Matheus.%20Quero%20o%20plano%20casal%20da%20consultoria." target="_blank" rel="noopener">Quero o plano casal
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="micro">Pagamento único por casal · cada um preenche a própria anamnese</p>
       </div>
     </div>
 
@@ -691,6 +748,10 @@ footer span{font-size:13px;color:var(--ink-2)}
       <details>
         <summary>Em quanto tempo vejo resultado?</summary>
         <p>Os mentorados costumam perceber mudança real em cerca de 2 meses de execução consistente. Com o plano de 4 meses, você tem tempo para transformar isso em hábito.</p>
+      </details>
+      <details>
+        <summary>Como funciona o plano casal?</summary>
+        <p>Vocês fecham juntos e pagam um valor único: R$250 por 2 meses ou R$425 por 4 meses. Cada um preenche a própria anamnese e recebe um protocolo individual de dieta e treino, com acompanhamento diário e feedbacks semanais para os dois.</p>
       </details>
       <details>
         <summary>E se eu perceber que não é para mim?</summary>
