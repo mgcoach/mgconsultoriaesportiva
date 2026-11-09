@@ -288,12 +288,20 @@ a{color:inherit}
 .rx-top{display:flex;flex-direction:column;gap:6px}
 .rx-top .rx-big{font-size:clamp(72px,18vw,120px);line-height:.85;font-weight:800;letter-spacing:-0.06em;color:var(--accent)}
 .rx-top span{font-size:17px;font-weight:600;letter-spacing:-0.01em}
-.rx-rows{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14)}
-.rx-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.rx-row b{font-size:15.5px;font-weight:600}
-.rx-row span{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
-.rx-row s{font-size:14px;color:rgba(255,255,255,.6)}
-.rx-row strong{font-size:22px;font-weight:800;letter-spacing:-0.03em}
+.rx-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.rx-table th{font-size:12px;font-weight:500;color:rgba(255,255,255,.66);text-align:left;padding:0 8px 10px 0;vertical-align:bottom;line-height:1.3}
+.rx-table td{padding:13px 8px 13px 0;border-top:1px solid rgba(255,255,255,.14);font-size:15px;font-weight:600;white-space:nowrap}
+.rx-table td.pct{font-size:20px;font-weight:800;color:var(--tip);letter-spacing:-0.02em}
+.rx-table th:last-child,.rx-table td:last-child{text-align:right;padding-right:0}
+.rx-table td s{font-size:13px;font-weight:500;color:rgba(255,255,255,.55);margin-right:8px}
+.rx-table td strong{font-size:18px;font-weight:800;letter-spacing:-0.02em}
+.rx-table tr.more td{font-size:14px;font-weight:500;color:rgba(255,255,255,.72);white-space:normal;text-align:left}
+.rx-couple{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.rx-couple b{font-size:15px;letter-spacing:-0.01em}
+.rx-couple p{font-size:14px;line-height:1.5;color:rgba(255,255,255,.78)}
+.rx-chips{display:flex;flex-wrap:wrap;gap:6px}
+.rx-chips span{font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);white-space:nowrap}
+.rx-chips span em{font-style:normal;color:var(--tip);font-weight:800}
 .rx small{font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.72)}
 .rsteps{display:flex;flex-direction:column;gap:10px}
 .rstep{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:18px;background:var(--card);border:1px solid var(--rule)}
@@ -771,26 +779,36 @@ footer span{font-size:13px;color:var(--ink-2)}
     <div class="split-head">
       <div class="head">
         <span class="eyebrow">Para quem já é mentorado</span>
-        <h2 class="h2">Indique quem você quer ver evoluindo. Sua renovação fica <span class="mark">20% mais leve.</span></h2>
+        <h2 class="h2">Indique quem você quer ver evoluindo. A cada indicação, <span class="mark">sua renovação fica mais leve.</span></h2>
       </div>
-      <p class="lead">Resultado bom a gente compartilha. Quando alguém indicado por você fecha a consultoria, você ganha 20% de desconto nas suas renovações, por todo o tempo em que essa pessoa continuar comigo.</p>
+      <p class="lead">Resultado bom a gente compartilha. Quando alguém indicado por você fecha a consultoria, você ganha 20% de desconto nas suas renovações. Cada nova indicação soma mais 10%. O desconto vale por todo o tempo em que os seus indicados continuarem comigo.</p>
     </div>
 
     <div class="refer">
       <div class="rx">
-        <div class="rx-top"><span class="rx-big">−20%</span><span>em cada renovação sua</span></div>
-        <div class="rx-rows">
-          <div class="rx-row"><b>Renovação de 2 meses</b><span><s>R$150</s><strong>R$120</strong></span></div>
-          <div class="rx-row"><b>Renovação de 4 meses</b><span><s>R$250</s><strong>R$200</strong></span></div>
+        <div class="rx-top"><span class="rx-big">−20%</span><span>na primeira indicação, e mais 10% a cada nova</span></div>
+        <table class="rx-table">
+          <thead><tr><th scope="col">Indicações ativas</th><th scope="col">Desconto</th><th scope="col">Renovação de 4 meses</th></tr></thead>
+          <tbody>
+            <tr><td>1 indicação</td><td class="pct">20%</td><td><s>R$250</s><strong>R$200</strong></td></tr>
+            <tr><td>2 indicações</td><td class="pct">30%</td><td><s>R$250</s><strong>R$175</strong></td></tr>
+            <tr><td>3 indicações</td><td class="pct">40%</td><td><s>R$250</s><strong>R$150</strong></td></tr>
+            <tr class="more"><td colspan="3">E mais 10% a cada nova indicação.</td></tr>
+          </tbody>
+        </table>
+        <div class="rx-couple">
+          <b>No plano casal também vale</b>
+          <p>10% de desconto na renovação do casal com a primeira indicação, e mais 5% a cada nova.</p>
+          <div class="rx-chips"><span>1 indicação · <em>10%</em></span><span>2 indicações · <em>15%</em></span><span>3 indicações · <em>20%</em></span></div>
         </div>
-        <small>O desconto continua valendo a cada renovação, enquanto a pessoa que você indicou permanecer na consultoria.</small>
+        <small>Os descontos valem enquanto as pessoas que você indicou permanecerem na consultoria.</small>
       </div>
 
       <div class="stack" style="gap:10px;min-width:0">
         <ol class="rsteps">
           <li class="rstep"><span class="rstep-n">1</span><div><h3>Indique alguém</h3><p>Um amigo, parente ou colega de trabalho que você sabe que quer mudar o corpo e a rotina. Mande o link desta página ou o meu WhatsApp.</p></div></li>
           <li class="rstep"><span class="rstep-n">2</span><div><h3>A pessoa fecha um plano</h3><p>Basta ela dizer o seu nome no primeiro contato comigo. Ela recebe o próprio protocolo e o mesmo acompanhamento que você tem.</p></div></li>
-          <li class="rstep"><span class="rstep-n">3</span><div><h3>Você renova com 20% de desconto</h3><p>O benefício vale em todas as suas renovações enquanto o seu indicado continuar comigo. Vocês evoluem juntos e você paga menos.</p></div></li>
+          <li class="rstep"><span class="rstep-n">3</span><div><h3>Você renova com desconto</h3><p>20% na primeira indicação e mais 10% a cada nova, em todas as renovações, enquanto os seus indicados continuarem comigo. Vocês evoluem juntos e você paga menos.</p></div></li>
         </ol>
         <div class="refer-cta">
           <a class="btn btn-primary" href="https://wa.me/?text=Estou%20fazendo%20a%20consultoria%20do%20Matheus%20Garrido%20(MG%20COACH)%20e%20lembrei%20de%20voc%C3%AA.%20Treino%20e%20dieta%20calculados%20para%20a%20sua%20rotina%2C%20com%20acompanhamento%20todo%20dia.%20D%C3%A1%20uma%20olhada%3A%20https%3A%2F%2Fmgcoach.github.io%2Fmgconsultoriaesportiva%2F" target="_blank" rel="noopener">Indicar pelo WhatsApp
@@ -837,7 +855,7 @@ footer span{font-size:13px;color:var(--ink-2)}
       </details>
       <details>
         <summary>Como funciona a indicação para quem já é mentorado?</summary>
-        <p>Se alguém indicado por você fechar a consultoria, você ganha 20% de desconto nas suas renovações. O desconto vale enquanto essa pessoa continuar na consultoria. Ela só precisa dizer o seu nome no primeiro contato.</p>
+        <p>Se alguém indicado por você fechar a consultoria, você ganha 20% de desconto nas suas renovações, e cada nova indicação soma mais 10%. No plano casal, o desconto é de 10% na primeira indicação e soma 5% a cada nova. Os descontos valem enquanto as pessoas indicadas continuarem na consultoria. Elas só precisam dizer o seu nome no primeiro contato.</p>
       </details>
       <details>
         <summary>E se eu perceber que não é para mim?</summary>
