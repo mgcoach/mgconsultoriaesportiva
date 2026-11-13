@@ -386,6 +386,34 @@ footer span{font-size:13px;color:var(--ink-2)}
 .ae-demo .an{margin:0}
 .ae-demo .an-p{list-style:decimal}
 .ae-demo [hidden]{display:none}
+/* Novo: exercícios em 3D */
+.app-3d{margin-top:16px;display:grid;gap:28px;padding:clamp(20px,4vw,36px);border-radius:24px;background:#f4f5f7;color:var(--ink)}
+@media (min-width:900px){.app-3d{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}.app-3d .d3-demo{order:-1}}
+.d3-copy{display:flex;flex-direction:column;gap:14px;min-width:0}
+.d3-new{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.04em;padding:6px 11px;border-radius:999px;background:var(--accent);color:var(--ink)}
+.d3-copy h3{font-size:clamp(26px,5.4vw,38px);line-height:1.04;font-weight:800;letter-spacing:-0.045em}
+.d3-copy>p{font-size:16px;line-height:1.6;color:var(--ink-2)}
+.d3-list{display:grid;gap:10px}
+@media (min-width:560px){.d3-list{grid-template-columns:1fr 1fr}}
+.d3-list li{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:16px;background:#fff;border:1px solid var(--rule)}
+.d3-list i{flex:none;width:38px;height:38px;border-radius:11px;background:var(--ink);display:inline-flex;align-items:center;justify-content:center}
+.d3-list div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.d3-list b{font-size:15.5px;letter-spacing:-0.02em;line-height:1.25}
+.d3-list span{font-size:14px;line-height:1.45;color:var(--ink-2)}
+.d3-foot{font-size:14px;line-height:1.5;color:var(--ink-2)}
+.d3-foot b{color:var(--ink)}
+.d3-demo{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.d3-ex{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.d3-ex button{font:600 14px/1.2 var(--font);padding:9px 13px;border-radius:999px;border:1px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.d3-ex button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.d3-ph{position:relative;width:min(100%,320px);aspect-ratio:540/1170;border-radius:36px;padding:8px;background:var(--ink);box-shadow:0 30px 60px -28px rgba(255,90,0,.55)}
+.d3-ph video,.d3-ph iframe{display:block;width:100%;height:100%;border:0;border-radius:29px;background:#f4f5f7;object-fit:cover}
+.d3-go{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font:700 15px/1 var(--font);padding:13px 18px;border-radius:999px;border:0;background:var(--accent);color:var(--ink);cursor:pointer;box-shadow:0 10px 24px rgba(12,26,38,.3);-webkit-tap-highlight-color:transparent}
+.d3-go:hover{background:var(--accent-hover)}
+.d3-ph.on .d3-go{display:none}
+.d3-cap{font-size:13px;color:var(--ink-2);text-align:center;line-height:1.45}
+.d3-cap a{color:var(--ink);font-weight:700}
+
 .app-evo{margin-top:16px;display:grid;gap:20px;padding:clamp(20px,4vw,36px);border-radius:24px;border:1px solid rgba(255,180,138,.45);background:rgba(255,255,255,.04)}
 @media (min-width:900px){.app-evo{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}}
 .app-evo .t{display:flex;flex-direction:column;gap:8px}
@@ -620,7 +648,7 @@ footer span{font-size:13px;color:var(--ink-2)}
       </figure>
       <div class="app-copy">
         <ul class="feats">
-        <li class="feat"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></i><div><b>Treino com vídeo de execução</b><span>Cada exercício com vídeo, séries, carga e descanso. Sem dúvida na hora de executar.</span></div></li>
+        <li class="feat"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></i><div><b>Treino com vídeo de execução</b><span>Cada exercício com vídeo, séries, carga e descanso. E agora também em 3D, para girar e pausar.</span></div></li>
         <li class="feat"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V11M12 16V7M17 16v-3"/></svg></i><div><b>Registro de cada série</b><span>Você anota carga e repetições. Eu acompanho a sua evolução semana a semana.</span></div></li>
         <li class="feat"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v5M9 3v5M17 21V3c-2.2 0-3.5 2.5-3.5 6s1.3 5 3.5 5"/></svg></i><div><b>Dieta com substituições</b><span>Calorias e macros do dia, opções para trocar e um toque para marcar a refeição feita.</span></div></li>
         <li class="feat"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 7v5l3 2"/></svg></i><div><b>Feedback semanal em 1 minuto</b><span>Peso, sono, energia e fome. Eu analiso e ajusto o que for preciso.</span></div></li>
@@ -670,6 +698,34 @@ footer span{font-size:13px;color:var(--ink-2)}
       </div>
     </div>
 
+    <div class="app-3d" id="app3d">
+      <div class="d3-copy">
+        <span class="d3-new">NOVO NO APP</span>
+        <h3>Veja cada exercício em 3D. Gire, pause e entenda.</h3>
+        <p>Os exercícios do seu treino ganharam um modelo anatômico em 3D. Você gira para o ângulo que quiser, para o movimento em cada fase e vê quais músculos estão trabalhando. Assim você chega na academia sabendo exatamente o que fazer.</p>
+        <ul class="d3-list">
+          <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></i><div><b>Gire e aproxime</b><span>Arraste para ver de frente, de lado ou de costas.</span></div></li>
+          <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></i><div><b>Pause em cada fase</b><span>Toque na fase e o movimento para no ponto-chave.</span></div></li>
+          <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M4 20 15 6"/><path d="M10 20a6 6 0 0 0-2.4-4.8"/></svg></i><div><b>Ângulos das articulações</b><span>Joelho, quadril e tronco medidos durante o movimento.</span></div></li>
+          <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9z"/></svg></i><div><b>Músculos em destaque</b><span>Os que mais trabalham acendem em laranja.</span></div></li>
+        </ul>
+        <p class="d3-foot"><b>Passo a passo junto:</b> postura, fases e os erros mais comuns, escritos para cada exercício. Já são 40 exercícios em 3D, e os próximos entram a cada atualização do app.</p>
+      </div>
+      <div class="d3-demo">
+        <div class="d3-ex" role="group" aria-label="Escolha um exercício">
+          <button type="button" aria-pressed="true" data-ex="agachamento-livre-barra">Agachamento</button>
+          <button type="button" aria-pressed="false" data-ex="hip-thrust-barra">Hip thrust</button>
+          <button type="button" aria-pressed="false" data-ex="supino-barra">Supino</button>
+          <button type="button" aria-pressed="false" data-ex="puxada-aberta">Puxada</button>
+        </div>
+        <div class="d3-ph" id="d3ph">
+          <video id="d3vid" src="https://mgcoach.github.io/mgconsultoria/videos/agachamento-livre-barra.mp4" poster="https://mgcoach.github.io/mgconsultoria/videos/agachamento-livre-barra.jpg" muted loop playsinline preload="none" aria-label="Vídeo do exercício em 3D com o modelo anatômico"></video>
+          <button class="d3-go" type="button" id="d3go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0c1a26" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>Girar e pausar aqui</button>
+        </div>
+        <p class="d3-cap">Teste agora: é o mesmo 3D que os alunos usam no app.<br><a id="d3full" href="https://mgcoach.github.io/mgconsultoria/3d/?ex=agachamento-livre-barra" target="_blank" rel="noopener">Abrir em tela cheia</a></p>
+      </div>
+    </div>
+
     <div class="app-evo">
       <div class="t">
         <small>Em evolução constante</small>
@@ -677,6 +733,7 @@ footer span{font-size:13px;color:var(--ink-2)}
         <p>Ele é atualizado o tempo todo. Cada necessidade de um aluno vira melhoria para todos, para o app dar conta de tudo o que você precisa no dia a dia. As novidades mais recentes:</p>
       </div>
       <ul class="news">
+        <li><em>NOVO</em>Exercícios em 3D: gire, pause e veja cada fase</li>
         <li><em>NOVO</em>Fotos de progresso enviadas pelo app</li>
         <li><em>NOVO</em>Eu recebo um aviso na hora em que você registra</li>
         <li><em>NOVO</em>Animações que explicam cada técnica</li>
@@ -1073,6 +1130,33 @@ footer span{font-size:13px;color:var(--ink-2)}
   }
   new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting;update()}).observe(hero);
   new IntersectionObserver(function(e){finalVisible=e[0].isIntersecting;update()}).observe(fin);
+})();
+
+(function(){
+  var ph=document.getElementById('d3ph'); if(!ph) return;
+  var v=document.getElementById('d3vid'), go=document.getElementById('d3go'), full=document.getElementById('d3full');
+  var B='https://mgcoach.github.io/mgconsultoria/', cur='agachamento-livre-barra', fr=null;
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play(){if(rm||fr) return; var p=v.play(); if(p&&p.catch)p.catch(function(){})}
+  function load3d(){
+    if(!fr){fr=document.createElement('iframe'); fr.title='Exercício em 3D'; fr.setAttribute('allow','fullscreen'); fr.loading='lazy';}
+    fr.src=B+'3d/?ex='+cur;
+    if(v.parentNode){v.pause(); ph.replaceChild(fr,v)}
+    ph.classList.add('on');
+  }
+  go.addEventListener('click',load3d);
+  document.querySelectorAll('.d3-ex button').forEach(function(b){
+    b.addEventListener('click',function(){
+      cur=b.getAttribute('data-ex');
+      document.querySelectorAll('.d3-ex button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      full.href=B+'3d/?ex='+cur;
+      if(fr&&ph.classList.contains('on')){fr.src=B+'3d/?ex='+cur;}
+      else{v.poster=B+'videos/'+cur+'.jpg'; v.src=B+'videos/'+cur+'.mp4'; play();}
+    });
+  });
+  if(!rm&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting) play(); else if(!v.paused) v.pause();})},{threshold:.4}).observe(ph);
+  }
 })();
 (function(){
   var fig=document.getElementById('appVideo'), v=document.getElementById('appVid'), b=document.getElementById('appPlay');
